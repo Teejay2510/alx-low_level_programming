@@ -1,17 +1,33 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * malloc_checked - allocates memory using malloc, exit(98) if it fails
- * @b: size of the memory block to be allocated
- *
- * Return: pointer to the address of the memory block
+ * create_array - Main Entry
+ * @size: input
+ * @c: input
+ * Return: 0
  */
-void *malloc_checked(unsigned int b)
+char *create_array(unsigned int size, char c)
 {
-	void *block;
+		char *arr;
+		unsigned int i;
 
-	block = malloc(B);
-	if (block == NULL)
-		exit(98);
-	return (block);
+		if (size == 0)
+		{
+			return (NULL);
+		}
+
+		arr = malloc(sizeof(char) * size);
+
+		if (arr == NULL)
+		{
+
+			return (NULL);
+		}
+
+		for (i = 0; i < size; i++)
+		{
+			arr[i] = c;
+		}
+
+		return (arr);
 }
