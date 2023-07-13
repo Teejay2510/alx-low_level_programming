@@ -6,11 +6,11 @@
  *
  * Return: pointer to the address of the memory block
  */
-void *malloc_checked(unsigned int a)
+void *malloc_checked(unsigned int b)
 {
 	void *block;
 
-	block = malloc(A);
+	block = malloc(B);
 	if (block == NULL)
 		exit(98);
 	return (block);
